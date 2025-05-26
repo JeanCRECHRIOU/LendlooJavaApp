@@ -31,19 +31,4 @@ CMD ["java", "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:50
 
 # mvn clean install -DskipTests
 
-# Executer le dockerfile depuis la racine du projet
-#sudo docker build -t java-clean-app -f apiweb/Dockerfile .
 
-# Puis executer l'image
-#docker run -p 8080:8080 java-clean-app
-
-
-# base de donnee
-# sudo docker run -d -p 5432:5432 --name postgres-container postgres
-
-#sudo docker compose up --build
-#sudo docker rm java-api (suppreesion d un container)
-
-#sudo docker-compose down (sudo docker-compose down sert à arrêter et supprimer les conteneurs, les réseaux et les volumes associés à un projet Docker Compose)
-#sudo docker compose up --build (init)
-#sudo docker ps (voir les image lancées)

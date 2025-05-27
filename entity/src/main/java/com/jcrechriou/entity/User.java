@@ -9,8 +9,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
-    public Long id;
+      public Long id;
     public String name;
     public String email;
 

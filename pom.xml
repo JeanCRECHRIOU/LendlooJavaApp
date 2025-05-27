@@ -11,7 +11,6 @@
         <module>service</module>
         <module>repository</module>
         <module>apiweb</module>
-        <module>dto</module>
     </modules>
     <dependencyManagement>
         <dependencies>

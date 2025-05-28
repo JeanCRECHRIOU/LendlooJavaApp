@@ -3,6 +3,8 @@ package com.jcrechriou.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -12,6 +14,14 @@ public class User {
       public Long id;
     public String name;
     public String email;
+    private String password; // hashé
+    private String phone;
+
+    @OneToMany(mappedBy = "user")
+    private List<Contact> contacts;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Loan> loans;
 
     // Getters et Setters
     public Long getId() {

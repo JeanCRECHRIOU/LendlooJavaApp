@@ -11,7 +11,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-      public Long id;
+    public Long id;
     public String name;
     public String email;
     private String password; // hashé
@@ -41,7 +41,8 @@ public class User {
     }
 
     // ✅ Constructeur par défaut (obligatoire pour Jackson)
-    public User() {}
+    public User() {
+    }
 
     public User(Long id, String name, String email) {
         this.id = id;

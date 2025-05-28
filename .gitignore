@@ -9,12 +9,6 @@
 # Logs
 *.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile tools for Java (J2ME)
-.mtj.tmp/
-
 # IDEs and editors
 .idea/
 *.iml
@@ -43,9 +37,8 @@ dist/
 nbdist/
 .nb-gradle/
 
-# VS Code Java
+# VS Code
 .vscode/
-bin/
 
 # Build tools
 /build/
@@ -79,9 +72,27 @@ coverage/
 *.exec
 jacoco.exec
 
-# Text files (si tu veux les ignorer comme précédemment)
-*.txt
+# Exclude .idea files from Android Studio/JetBrains IDEs
+*.iml
 
-*.properties
+# Exclude all node modules (React Native)
+node_modules/
 
-*
+# Exclude all build output files for React Native
+build/
+
+# React Native (Metro Bundler)
+*.log
+metro-*
+npm-debug.log*
+
+# Ignore files for package managers
+yarn-error.log
+pnpm-debug.log
+
+# Exclude the Maven Wrapper jar file (if you don't want to include it)
+gradle/wrapper/gradle-wrapper.jar
+
+# Ignore any other OS-specific files like Thumbs.db
+.DS_Store
+Thumbs.db

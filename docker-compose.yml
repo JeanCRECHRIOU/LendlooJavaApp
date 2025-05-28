@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  apiweb:
+    build:
+      context: .
+      dockerfile: apiweb/Dockerfile
+    container_name: java-api
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    network_mode: "host"
+
+

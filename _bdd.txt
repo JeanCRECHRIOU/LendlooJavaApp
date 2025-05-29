@@ -1,0 +1,30 @@
+bdd
+devuser
+fT9v$Xz1!qL@4RwZ
+
+sudo -u postgres psql
+CREATE USER devuser WITH PASSWORD 'fT9v$Xz1!qL@4RwZ';
+CREATE DATABASE lendoodb OWNER devuser;
+GRANT ALL PRIVILEGES ON DATABASE lendoodb TO devuser;
+\q
+
+ssh-keygen -t ed25519 -C "jean.crec-hriou@outlook.com"
+ls ~/.ssh/id_*.pub
+cat ~/.ssh/id_ed25519.pub
+
+
+SSH
+
+Afficher les clé autorisées sur serveur
+nano ~/.ssh/authorized_keys
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMxL56rWkvIYU8YhGpTmwF5a9fHuLz1dAaWPzi6nAI9 jean.crec-hriou@outlook.com
+clé windows (wsl debian)
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKZye1N/g5v9Nc/XeJC+pTcjfToUEAIpdlxvEzgDWH8L jean.crec-hriou@outlook.com
+ssh jean_dev@78.121.227.63
+curl -4 ifconfig.me
+ip a // ip locale
+
+redirection port local 5433 vers le port 5432 du serveur Debian, via SSH.
+ssh -i ~/.ssh/id_ed25519 -L 5433:localhost:5432 jean_dev@78.121.227.63
+
